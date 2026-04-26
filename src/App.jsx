@@ -73,7 +73,7 @@ Return ONLY a JSON array, no markdown, no extra text:
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }],
+            messages: [{ parts: [{ text: prompt }] }],
             generationConfig: { temperature: 0.8, maxOutputTokens: 2000 }
           })
         }
@@ -116,7 +116,7 @@ Return ONLY a JSON array, no markdown, no extra text:
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-            contents: [{ parts: [{ text: `Generate SEO data for this news article. Title: "${article.title}", Category: "${article.category}". Return ONLY JSON no markdown: {"metaTitle":"SEO title under 60 chars","metaDescription":"150-160 char description","focusKeyword":"main keyword","secondaryKeywords":["kw1","kw2","kw3"],"urlSlug":"url-slug","canonicalUrl":"https://orbisdaily.com/news/slug","ogTitle":"social title","ogDescription":"social desc","twitterTitle":"twitter title","twitterDescription":"twitter desc","schemaMarkup":"NewsArticle","seoScore":88,"readabilityScore":84,"keywordDensity":"2.3%","wordCount":230,"internalLinkSuggestions":["topic1","topic2"],"improvements":["tip1","tip2","tip3"]}` }] }],
+            messages: [{ parts: [{ text: `Generate SEO data for this news article. Title: "${article.title}", Category: "${article.category}". Return ONLY JSON no markdown: {"metaTitle":"SEO title under 60 chars","metaDescription":"150-160 char description","focusKeyword":"main keyword","secondaryKeywords":["kw1","kw2","kw3"],"urlSlug":"url-slug","canonicalUrl":"https://orbisdaily.com/news/slug","ogTitle":"social title","ogDescription":"social desc","twitterTitle":"twitter title","twitterDescription":"twitter desc","schemaMarkup":"NewsArticle","seoScore":88,"readabilityScore":84,"keywordDensity":"2.3%","wordCount":230,"internalLinkSuggestions":["topic1","topic2"],"improvements":["tip1","tip2","tip3"]}` }] }],
             generationConfig: { temperature: 0.5, maxOutputTokens: 1000 }
         })
       });
