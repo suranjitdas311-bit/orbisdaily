@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+ import { useState, useEffect, useRef } from "react";
 
 const CATEGORIES = ["World", "Politics", "Business", "Technology", "Science", "Health", "Sports", "Culture"];
 
