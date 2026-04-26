@@ -68,7 +68,7 @@ Return ONLY a JSON array, no markdown, no extra text:
 [{"title":"headline max 12 words","subtitle":"one line subheadline","summary":"2 sentence summary","content":"200-250 word article with quotes and analysis","source":"one source","reporter":"Full Name","location":"City, Country","region":"Europe/Asia/Americas/Africa/Middle East","publishedAt":"2026-04-23T10:00:00Z","breaking":false,"exclusive":false,"tags":["tag1","tag2","tag3"],"readTime":3}]`;
 
       const res = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/llama3-8b-8192:generateContent?key=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",
+        "https://generativelanguage.googleapis.com/v1beta/models/llama3-8b-8192:chat/completions?key=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",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -112,7 +112,7 @@ Return ONLY a JSON array, no markdown, no extra text:
     setSeoLoading(true);
     setSeoData(null);
     try {
-      const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/llama3-8b-8192:generateContent?key=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", {
+      const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/llama3-8b-8192:chat/completions?key=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", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
